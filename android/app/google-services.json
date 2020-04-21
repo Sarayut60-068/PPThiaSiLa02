@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "815987462776",
+    "firebase_url": "https://thaisila02.firebaseio.com",
+    "project_id": "thaisila02",
+    "storage_bucket": "thaisila02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815987462776:android:be6b575718094a182b138d",
+        "android_client_info": {
+          "package_name": "com.example.thaisila02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815987462776-u2c0hfgrll1nbupvkggecolj5hjvj3k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-YCydD-88pHK68YYaQHVuEtqZsD-QIys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815987462776-u2c0hfgrll1nbupvkggecolj5hjvj3k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

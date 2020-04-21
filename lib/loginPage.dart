@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:thaisila02/ai.dart';
+import 'package:thaisila02/heart.dart';
+import 'package:thaisila02/study.dart';
 import 'user.dart';
 import 'home.dart';
+import 'study.dart';
+import 'heart.dart';
+import 'ai.dart';
+import 'setup.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -115,7 +122,8 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SecondPage()));
                   },
-                )),
+                ),
+                ),
               ],
             ),
           ),
@@ -128,114 +136,166 @@ class _LoginPageState extends State<LoginPage> {
 var studySection = Expanded(
   child: Container(
     height: 500,
-    color: Colors.pink,
+    color: Colors.greenAccent,
+    child: ListView(
+      children: <Widget>[
+        Container(
+          height: 90,
+          color: Colors.lightBlueAccent,
+          child: new Image.asset('assets/images/01.JPG'),
+        ),
+        Container(
+          height: 150,
+          color: Colors.green,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Image.asset("assets/images/02.JPG"),
+                  Image.asset("assets/images/03.JPG"),
+                  Image.asset("assets/images/04.JPG"),
+                  Image.asset("assets/images/05.JPG"),
+                  Image.asset("assets/images/06.JPG"),
+                  Image.asset("assets/images/07.JPG"),
+                  Image.asset("assets/images/08.JPG"),
+                  Image.asset("assets/images/05.JPG"),
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          height: 250,
+          color: Colors.white70,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Welcome to ThaiSiLa",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.red),
+              ),
+              Text(" Thai sign language for studying (ThaiSiLa)",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.pinkAccent),),
+              Text(""),
+              Text("ThaiSiLa คือ แอปพลิเคชันภาษามือไทยสำหรับโทรศัพท์มือถือ โดยมีภาพเคลื่อนไหว สอนการสื่อสารท่าทางภาษามือรวมถึงคำบรรยายเพื่อสะดวกต่อการเรียนรู้และใช้งานมากยิ่งขึ้น"),
+              Text(""),
+              Text("ภาษามือไทย  คือภาษามือทางการของประเทศไทย และใช้เป็นอย่างมากในประเทศไทย เทียบเป็น 20% ใน 56,000 คนหูหนวกก่อนรู้ภาษาที่ได้ไปที่โรงเรียน ภาษามือไทยได้ชื่อว่าเป็น (ภาษาทางการของประเทศไทยสำหรับคนหูหนวก) ในสิงหาคม พ.ศ. 2542 ในการลงนามโดยรัฐมนตรีว่าการกระทรวงศึกษาธิการในนามของรัฐบาลไทย"),
+              ],
+          ),
+        ),
+//        Container(
+//          height: 250,
+//          color: Colors.amber,
+//        ),
+      ],
+    ),
   ),
 );
-
-class BarSection extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            body: Container(
-      color: Colors.green,
-    )
-            /*child: Row(
-                  children: <Widget>[
-                    IconButton(
-                        icon: Icon(Icons.home,size: 10,),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => home()));
-                        }),
-                    Icon(
-                      Icons.home,
-                      size: 10,
-                    ),
-                    Icon(
-                      Icons.book,
-                      size: 10,
-                    ),
-                    Icon(Icons.favorite, size: 10),
-                    Icon(
-                      Icons.camera_alt,
-                      size: 10,
-                    )
-                  ],
-                )*/
-            ));
-  }
-}
 
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-      ),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            studySection,
-            Container(
-              color: Colors.green,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Home"),
+        ),
+        body: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              studySection,
+              Container(
+                color: Colors.blue,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
                   Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
                     icon: Icon(
-                      Icons.home,
+                      Icons.ondemand_video,
                       size: 50,
                     ),
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => home()));
-                    }),],)),
-          Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
-                    icon: Icon(
-                      Icons.book,
-                      size: 50,
-                    ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => home()));
-                    }),],)),
-                  Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
-                      icon: Icon(
-                        Icons.favorite,
-                        size: 50,
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home()));
-                      }),],)),
-                  Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
-                      icon: Icon(
-                        Icons.camera_alt,
-                        size: 50,
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home()));
-                      }),],)),
-                  Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
-                      icon: Icon(
-                        Icons.settings,
-                        size: 50,
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home()));
-                      }),],)),
-                ],
-              ),
-            )
-          ],
+                    }
+                    ),],)),
+                    Container(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          children: <Widget>[
+                            IconButton(
+                                icon: Icon(
+                                  Icons.book,
+                                  size: 50,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => study()));
+                                }),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          children: <Widget>[
+                            IconButton(
+                                icon: Icon(
+                                  Icons.favorite,
+                                  size: 50,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => heart()));
+                                }),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          children: <Widget>[
+                            IconButton(
+                                icon: Icon(
+                                  Icons.camera_alt,
+                                  size: 50,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ai()));
+                                }),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          children: <Widget>[
+                            IconButton(
+                                icon: Icon(
+                                  Icons.settings,
+                                  size: 50,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => setup()));
+                                }),
+                          ],
+                        )),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }

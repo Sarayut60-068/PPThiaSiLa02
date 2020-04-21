@@ -14,7 +14,7 @@ description: App to Hero
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -23,6 +23,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  firebase_core: ^0.4.4+3
 
 dev_dependencies:
   flutter_test:
@@ -35,8 +36,65 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
-     - assets/images/logo.png
-  
+    - assets/images/logo.png
+    - assets/images/1.jpg
+    - assets/images/2.jpg
+    - assets/images/hello.PNG
+    - assets/images/sana.PNG
+    - assets/images/3.JPG
+    - assets/images/4.JPG
+    - assets/images/5.JPG
+    - assets/images/6.JPG
+    - assets/images/7.JPG
+    - assets/images/8.JPG
+    - assets/images/3.JPG
+    - assets/images/4.JPG
+    - assets/images/5.JPG
+    - assets/images/6.JPG
+    - assets/images/7.JPG
+    - assets/images/8.JPG
+    - assets/images/9.JPG
+    - assets/images/10.JPG
+    - assets/images/11.JPG
+    - assets/images/12.JPG
+    - assets/images/13.JPG
+    - assets/images/14.JPG
+    - assets/images/15.JPG
+    - assets/images/16.JPG
+    - assets/images/17.JPG
+    - assets/images/18.JPG
+    - assets/images/19.JPG
+    - assets/images/20.JPG
+    - assets/images/21.JPG
+    - assets/images/22.JPG
+    - assets/images/23.JPG
+    - assets/images/24.JPG
+    - assets/images/25.JPG
+    - assets/images/26.JPG
+    - assets/images/27.JPG
+    - assets/images/28.JPG
+    - assets/images/29.JPG
+    - assets/images/30.JPG
+    - assets/images/31.JPG
+    - assets/images/32.JPG
+    - assets/images/33.JPG
+    - assets/images/34.JPG
+    - assets/images/35.JPG
+    - assets/images/36.JPG
+    - assets/images/37.JPG
+    - assets/images/38.JPG
+    - assets/images/39.JPG
+    - assets/images/40.JPG
+    - assets/images/01.JPG
+    - assets/images/02.JPG
+    - assets/images/03.JPG
+    - assets/images/04.JPG
+    - assets/images/05.JPG
+    - assets/images/06.JPG
+    - assets/images/07.JPG
+    - assets/images/08.JPG
+    - assets/images/09.JPG
+
 
 
   # The following line ensures that the Material Icons font is
