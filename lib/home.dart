@@ -4,15 +4,17 @@ import 'package:thaisila02/setting.dart';
 import 'loginPage.dart';
 import 'home.dart';
 
+
+
 class home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
      // TODO: implement build
     return MaterialApp(
-      title: 'VDO',
+      title: 'Profile',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to VDO'),
+          title: Text('Welcome to Profile'),
           backgroundColor: Colors.deepOrangeAccent,
         ),
         floatingActionButton: FloatingActionButton(
@@ -29,7 +31,7 @@ class home extends StatelessWidget{
           child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
-                accountName: Text('Sarayut อิอิ'),
+                accountName: Text('Sarayut Rattanachot'),
                 accountEmail: Text('s6035512068@phuket.psu.ac.th'),
                 currentAccountPicture: GestureDetector(
                   child: CircleAvatar(
@@ -39,7 +41,7 @@ class home extends StatelessWidget{
 
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                     image: NetworkImage("https://www.shutterstock.com/th/blog/wp-content/uploads/sites/16/2018/09/21.jpg?w=750"),
                   ),
                 ),
@@ -56,24 +58,12 @@ class home extends StatelessWidget{
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext) => Contact("ติดต่อฉัน"))),
               ),
               //Divider(),
-
-
-
-
-
-
             ],
 
           ),
         ),
 
-
-
-
-
-
       ),
     );
   }
-
 }

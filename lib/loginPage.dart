@@ -9,6 +9,7 @@ import 'heart.dart';
 import 'ai.dart';
 import 'setup.dart';
 
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -213,12 +214,12 @@ class SecondPage extends StatelessWidget {
                   children: <Widget>[
                   Container( margin: EdgeInsets.all(10),child:Column(children: <Widget>[ IconButton(
                     icon: Icon(
-                      Icons.ondemand_video,
+                      Icons.book,
                       size: 50,
                     ),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => home()));
+                          MaterialPageRoute(builder: (context) => study()));
                     }
                     ),],)),
                     Container(
@@ -227,14 +228,14 @@ class SecondPage extends StatelessWidget {
                           children: <Widget>[
                             IconButton(
                                 icon: Icon(
-                                  Icons.book,
+                                  Icons.gps_fixed,
                                   size: 50,
                                 ),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => study()));
+                                          builder: (context) => setup()));
                                 }),
                           ],
                         )),
@@ -278,14 +279,14 @@ class SecondPage extends StatelessWidget {
                           children: <Widget>[
                             IconButton(
                                 icon: Icon(
-                                  Icons.settings,
+                                  Icons.person,
                                   size: 50,
                                 ),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => setup()));
+                                          builder: (context) => home()));
                                 }),
                           ],
                         )),
@@ -299,3 +300,4 @@ class SecondPage extends StatelessWidget {
     );
   }
 }
+
