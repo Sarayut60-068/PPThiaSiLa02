@@ -19,11 +19,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  video_player: ^0.10.12+2
+  chewie: ^0.9.10
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  firebase_core: ^0.4.4+3
+  firebase_core: ^0.5.0
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +39,16 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
+    - assets/images/
+    - assets/images/potoTSL/b/
+    - assets/images/potoTSL/c/
+    - assets/images/potoTSL/d/
+    - assets/images/potoTSL/e/
+    - assets/images/potoTSL/f/
+    - assets/images/potoTSL/g/
+    - assets/images/potoTSL/h/
+    - assets/images/potoTSL/i/
+    - assets/images/potoTSL/j/
     - assets/images/logo.png
     - assets/images/1.jpg
     - assets/images/2.jpg
@@ -94,6 +107,17 @@ flutter:
     - assets/images/07.JPG
     - assets/images/08.JPG
     - assets/images/09.JPG
+    - assets/videos/testt/001.mp4
+    - assets/videos/easy/es1/
+    - assets/videos/easy/es2/
+    - assets/videos/easy/es3/
+    - assets/videos/easy/es4/
+    - assets/videos/medium/me1/
+    - assets/videos/medium/me2/
+    - assets/videos/medium/me3/
+    - assets/videos/difficult/di1/
+    - assets/videos/difficult/di2/
+    - assets/videos/difficult/di3/
 
 
 

@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:thaisila02/studytPoto/A1.dart';
+import 'package:thaisila02/studytPoto/B2.dart';
+import 'package:thaisila02/studytPoto/C3.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
+import 'package:thaisila02/studytPoto/E5.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
+import 'package:thaisila02/studytPoto/G7.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
+import 'package:thaisila02/studytPoto/I9.dart';
+import 'package:thaisila02/studytPoto/J10.dart';
 import 'loginPage.dart';
 import 'home.dart';
-
 
 class study extends StatelessWidget {
   @override
@@ -17,148 +25,199 @@ class study extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SecondPage()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => SecondPage()));
           },
           child: Icon(Icons.home),
           backgroundColor: Colors.green,
         ),
-        body: Container(
-          child: Container(
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                Column(
+        body: SafeArea(
+          child: ListView(
+            children: <Widget>[
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new Container(
-                      child: new Image.asset('assets/images/1.jpg'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/2.jpg'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/3.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/4.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/5.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/6.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/7.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/8.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/9.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/10.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/11.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/12.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/13.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/14.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/15.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/16.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/17.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/18.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/19.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/20.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/21.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/22.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/23.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/24.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/25.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/26.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/27.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/28.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/29.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/30.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/31.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/32.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/33.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/34.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/35.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/36.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/37.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/38.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/39.JPG'),
-                    ),
-                    new Container(
-                      child: new Image.asset('assets/images/40.JPG'),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => A1()));
+                      },
+                      color: Colors.purple,
+                      child: Text(
+                        'สัญลักลักษณ์แทนการเคลื่อนไหว',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => B2()));
+                      },
+                      color: Colors.blue,
+                      child: Text(
+                        'เครือ่งใช้ เครื่องแต่งกาย',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => C3()));
+                      },
+                      color: Colors.lightBlueAccent,
+                      child: Text(
+                        'บุคลากร ครอบครัว อาชีพ',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => D4()));
+                      },
+                      color: Colors.green,
+                      child: Text(
+                        'ผัก ผลไม้ อาหาร',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => E5()));
+                      },
+                      color: Colors.yellow,
+                      child: Text(
+                        'วัน เดือน ปี เวลา',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => F6()));
+                      },
+                      color: Colors.orange,
+                      child: Text(
+                        'สถานที่ จังหวัด',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => G7()));
+                      },
+                      color: Colors.red,
+                      child: Text(
+                        'จำนวนนับ ตัวเลข',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => H8()));
+                      },
+                      color: Colors.pinkAccent,
+                      child: Text(
+                        'สัตว์',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => I9()));
+                      },
+                      color: Colors.purpleAccent,
+                      child: Text(
+                        'คุณลักษณะทั่วไป',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => J10()));
+                      },
+                      color: Colors.deepPurple,
+                      child: Text(
+                        'เบ็ตเตล็ด',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
-
-
