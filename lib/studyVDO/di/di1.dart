@@ -210,7 +210,8 @@ class di1 extends StatelessWidget {
 
 //          ChewieListItem(
 //            videoPlayerController: VideoPlayerController.network(
-//              'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+//             'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+//
 //            ),
 //          ),
         ],
