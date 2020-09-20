@@ -8,6 +8,7 @@ import 'loginPage.dart';
 import 'package:thaisila02/utility/my_style.dart';
 import 'package:thaisila02/utility/nomal_dialog.dart';
 import 'package:http/http.dart' as http;
+
 class SignupPage extends StatefulWidget {
   @override
   _SignupPageState createState() => _SignupPageState();
