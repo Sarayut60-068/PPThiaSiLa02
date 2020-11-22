@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../study.dart';
+
 class I9 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -7,8 +9,16 @@ class I9 extends StatelessWidget {
       title: 'I9',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ุณลักษณะทั่วไป'),
+          title: Text('คุณลักษณะทั่วไป'),
           backgroundColor: Colors.deepOrangeAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => study()));
+                })
+          ],
         ),
         body: ListView(
           children: <Widget>[

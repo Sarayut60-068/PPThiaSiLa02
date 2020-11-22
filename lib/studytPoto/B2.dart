@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../study.dart';
+
+
 class B2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,9 +12,17 @@ class B2 extends StatelessWidget {
         appBar: AppBar(
           title: Text('ของใช้ เครื่องแต่งกาย'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => study()));
+                })
+          ],
         ),
         body: ListView(
-          children: <Widget>[
+           children: [
             Review('ของใช้', 'assets/images/potoTSL/b/b01.JPG'),
             Re('จวัก ', 'assets/images/potoTSL/b/b02.JPG'),
             Review('ทัพพี ', 'assets/images/potoTSL/b/b03.JPG'),
@@ -132,3 +143,4 @@ class Re extends StatelessWidget {
     );
   }
 }
+

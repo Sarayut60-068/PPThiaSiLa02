@@ -142,7 +142,7 @@ class es4 extends StatelessWidget {
           RaisedButton(
             color: Colors.red,
             child: Text(
-              'วังู',
+              'งู',
               style: TextStyle(color: Colors.white),
             ),
           ),

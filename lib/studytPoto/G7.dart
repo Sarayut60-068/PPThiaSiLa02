@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../study.dart';
+
 class G7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,6 +11,14 @@ class G7 extends StatelessWidget {
         appBar: AppBar(
           title: Text('จำนวนนับ ตัวเลข'),
           backgroundColor: Colors.greenAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => study()));
+                })
+          ],
         ),
         body: ListView(
           children: <Widget>[

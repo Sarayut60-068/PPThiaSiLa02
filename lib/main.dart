@@ -9,6 +9,9 @@ import 'user.dart';
 import 'signup.dart';
 import 'package:thaisila02/loginPage.dart';
 import 'framework.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -280,6 +283,7 @@ class _LoginPageState extends State<LoginPage> {
                   MyStyle().mySizebox(),
                   loginButton(),
                   FaceLog(),
+                  GoogleLog(),
                   register(),
                 ],
               ),
@@ -495,7 +499,7 @@ Widget FaceLog() => Container(
             child: Container(
               decoration: BoxDecoration(
                   border: Border.all(
-                      color: Colors.black,
+                      color: Colors.blue,
                       style: BorderStyle.solid,
                       width: 1.0),
                   color: Colors.transparent,
@@ -520,3 +524,41 @@ Widget FaceLog() => Container(
         ],
       ),
     );
+
+Widget GoogleLog() => Container(
+ child: Column(
+   crossAxisAlignment: CrossAxisAlignment.start,
+   children: <Widget>[
+     SizedBox(height: 20.0),
+     Container(
+       height: 40.0,
+       color: Colors.transparent,
+       child: Container(
+         decoration: BoxDecoration(
+             border: Border.all(
+                 color: Colors.red,
+                 style: BorderStyle.solid,
+                 width: 1.0),
+             color: Colors.transparent,
+             borderRadius: BorderRadius.circular(20.0)),
+         child: Row(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: <Widget>[
+             Center(
+               child: ImageIcon(AssetImage('assets/google_logo.png')),
+             ),
+             SizedBox(width: 10.0),
+             Center(
+               child: Text('Log in with Google',
+                   style: TextStyle(
+                       fontWeight: FontWeight.bold,
+                       fontFamily: 'Montserrat')),
+             )
+           ],
+         ),
+       ),
+     )
+   ],
+ ),
+);
+

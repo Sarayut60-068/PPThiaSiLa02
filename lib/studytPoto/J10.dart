@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../study.dart';
+
 class J10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,6 +11,14 @@ class J10 extends StatelessWidget {
         appBar: AppBar(
           title: Text('เบ็ตเตล็ด'),
           backgroundColor: Colors.redAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => study()));
+                })
+          ],
         ),
         body: ListView(
           children: <Widget>[

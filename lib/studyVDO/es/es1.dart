@@ -20,13 +20,6 @@ class es1 extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
           ),
-          ChewieListItem(
-            videoPlayerController: VideoPlayerController.asset(
-              'assets/videos/easy/es1/es01.mp4',
-            ),
-            looping: true,
-          ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -40,7 +33,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -54,7 +46,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -68,7 +59,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -82,7 +72,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -94,9 +83,7 @@ class es1 extends StatelessWidget {
             videoPlayerController: VideoPlayerController.asset(
               'assets/videos/easy/es1/es06.mp4',
             ),
-            looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -110,7 +97,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -124,7 +110,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -138,7 +123,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -152,7 +136,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -166,7 +149,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -180,7 +162,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -194,7 +175,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -208,7 +188,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
           RaisedButton(
             color: Colors.red,
             child: Text(
@@ -222,18 +201,6 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
-
-//          ChewieListItem(
-//            videoPlayerController: VideoPlayerController.network(
-//              'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-//            ),
-//          ),
-//          ChewieListItem(
-//            // This URL doesn't exist - will display an error
-//            videoPlayerController: VideoPlayerController.network(
-//              'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/error.mp4',
-//            ),
-//          ),
         ],
       ),
     );

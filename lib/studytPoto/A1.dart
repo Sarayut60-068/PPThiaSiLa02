@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thaisila02/study.dart';
 
 class A1 extends StatelessWidget {
   @override
@@ -9,7 +10,16 @@ class A1 extends StatelessWidget {
         appBar: AppBar(
           title: Text('สัญลักษณ์แทนการเคลื่อนไหว'),
           backgroundColor: Colors.purple,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => study()));
+              })
+          ],
         ),
+
         body: Center(
           child: Container(
             child: ListView(

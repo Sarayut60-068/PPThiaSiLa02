@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/District.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/Hospital.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/Postoffice.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/homehome.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/measure.dart';
+import 'package:thaisila02/studytPoto/somePotoAndVedio/F/school.dart';
+
+import '../constants.dart';
+import '../loginPage.dart';
+import '../study.dart';
 
 class F6 extends StatelessWidget {
   @override
@@ -9,35 +19,91 @@ class F6 extends StatelessWidget {
         appBar: AppBar(
           title: Text('สถานที่ จังหวัด'),
           backgroundColor: Colors.green,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => study()));
+                })
+          ],
         ),
         body: ListView(
           children: <Widget>[
-            Review('จังหวัด', 'assets/images/potoTSL/f/f01.JPG'),
-            Re('กรุงเทพมหานคร', 'assets/images/potoTSL/f/f02.JPG'),
-            Review('ภาคใต้', 'assets/images/potoTSL/f/f03.JPG'),
-            Re('ชุมพร', 'assets/images/potoTSL/f/f04.JPG'),
-            Review('ระนอง', 'assets/images/potoTSL/f/f05.JPG'),
-            Re('สุราษฎร์ธานี', 'assets/images/potoTSL/f/f06.JPG'),
-            Review('พังงา ', 'assets/images/potoTSL/f/f07.JPG'),
-            Re('ภูเก็ต', 'assets/images/potoTSL/f/f08.JPG'),
-            Review('กระบี่', 'assets/images/potoTSL/f/f09.JPG'),
-            Re('นครศรีธรรมราช', 'assets/images/potoTSL/f/f10.JPG'),
-            Review('ตรัง', 'assets/images/potoTSL/f/f11.JPG'),
-            Re('พัทลุง', 'assets/images/potoTSL/f/f12.JPG'),
-            Review('สงขลา', 'assets/images/potoTSL/f/f13.JPG'),
-            Re('สตูล', 'assets/images/potoTSL/f/f14.JPG'),
-            Review('ปัตตานี', 'assets/images/potoTSL/f/f15.JPG'),
-            Re('ยะลา', 'assets/images/potoTSL/f/f16.JPG'),
-            Review('นราธิวาส', 'assets/images/potoTSL/f/f17.JPG'),
-            Re('ที่ทำการไปรษณีย์', 'assets/images/potoTSL/f/f18.JPG'),
-            Review('ที่ว่าการอำเภอ', 'assets/images/potoTSL/f/f19.JPG'),
-            Re('โรงพยาบาล', 'assets/images/potoTSL/f/f20.JPG'),
-            Review('ธนาคารกรุงเทพ', 'assets/images/potoTSL/f/f21.JPG'),
-            Re('โรงเรียน', 'assets/images/potoTSL/f/f22.JPG'),
-            Review('วัด', 'assets/images/potoTSL/f/f23.JPG'),
-            Re('ตลาด', 'assets/images/potoTSL/f/f24.JPG'),
-            Review('บ้าน', 'assets/images/potoTSL/f/f25.JPG'),
-            Re('ห้องน้ำ', 'assets/images/potoTSL/f/f26.JPG'),
+            TitleWithMoreBtn(title: "ที่ว่าการอำเภอ", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => District(),
+                ),
+              );
+            }),
+            TitleWithMoreBtn(title: "บ้าน", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => homehome(),
+                ),
+              );
+            }),
+            TitleWithMoreBtn(title: "โรงพยาบาล", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Hospital(),
+                ),
+              );
+            }),
+            TitleWithMoreBtn(title: "วัด", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => measure(),
+                ),
+              );
+            }),
+            TitleWithMoreBtn(title: "ที่ทำการไปรษณีย์", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Postoffice(),
+                ),
+              );
+            }),
+            TitleWithMoreBtn(title: "โรงเรียน", press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => school(),
+                ),
+              );
+            }),
+//            Review('จังหวัด', 'assets/images/potoTSL/f/f01.JPG'),
+//            Re('กรุงเทพมหานคร', 'assets/images/potoTSL/f/f02.JPG'),
+//            Review('ภาคใต้', 'assets/images/potoTSL/f/f03.JPG'),
+//            Re('ชุมพร', 'assets/images/potoTSL/f/f04.JPG'),
+//            Review('ระนอง', 'assets/images/potoTSL/f/f05.JPG'),
+//            Re('สุราษฎร์ธานี', 'assets/images/potoTSL/f/f06.JPG'),
+//            Review('พังงา ', 'assets/images/potoTSL/f/f07.JPG'),
+//            Re('ภูเก็ต', 'assets/images/potoTSL/f/f08.JPG'),
+//            Review('กระบี่', 'assets/images/potoTSL/f/f09.JPG'),
+//            Re('นครศรีธรรมราช', 'assets/images/potoTSL/f/f10.JPG'),
+//            Review('ตรัง', 'assets/images/potoTSL/f/f11.JPG'),
+//            Re('พัทลุง', 'assets/images/potoTSL/f/f12.JPG'),
+//            Review('สงขลา', 'assets/images/potoTSL/f/f13.JPG'),
+//            Re('สตูล', 'assets/images/potoTSL/f/f14.JPG'),
+//            Review('ปัตตานี', 'assets/images/potoTSL/f/f15.JPG'),
+//            Re('ยะลา', 'assets/images/potoTSL/f/f16.JPG'),
+//            Review('นราธิวาส', 'assets/images/potoTSL/f/f17.JPG'),
+//            Re('ที่ทำการไปรษณีย์', 'assets/images/potoTSL/f/f18.JPG'),
+//            Review('ที่ว่าการอำเภอ', 'assets/images/potoTSL/f/f19.JPG'),
+//            Re('โรงพยาบาล', 'assets/images/potoTSL/f/f20.JPG'),
+//            Review('ธนาคารกรุงเทพ', 'assets/images/potoTSL/f/f21.JPG'),
+//            Re('โรงเรียน', 'assets/images/potoTSL/f/f22.JPG'),
+//            Review('วัด', 'assets/images/potoTSL/f/f23.JPG'),
+//            Re('ตลาด', 'assets/images/potoTSL/f/f24.JPG'),
+//            Review('บ้าน', 'assets/images/potoTSL/f/f25.JPG'),
+//            Re('ห้องน้ำ', 'assets/images/potoTSL/f/f26.JPG'),
           ],
         ),
       ),
@@ -130,6 +196,40 @@ class Re extends StatelessWidget {
             color: Colors.deepPurpleAccent,
             alignment: Alignment(1, 0), //จัดข้อความยุชิดขวา
             padding: const EdgeInsets.all(8.0),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TitleWithMoreBtn extends StatelessWidget {
+  const TitleWithMoreBtn({
+    Key key,
+    this.title,
+    this.press,
+  }) : super(key: key);
+  final String title;
+  final Function press;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Row(
+        children: <Widget>[
+          TitleWithCustomUnderline(text: title),
+          Spacer(),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            color: kPrimaryColor,
+            onPressed: press,
+            child: Text(
+              "More",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),
