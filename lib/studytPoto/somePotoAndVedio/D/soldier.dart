@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class pineapple extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class pineapple extends StatelessWidget {
         appBar: AppBar(
           title: Text('สับปะรด (pineapple)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('สับปะรด', 'assets/images/potoTSL/d/d23.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di2/di030.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B8%AA%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%B0%E0%B8%A3%E0%B8%94.mp4?alt=media&token=d63b8515-2a17-4f7c-b1bb-42b2178875da',
               ),
-              looping: true,
             ),
           ],
         ),

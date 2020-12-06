@@ -241,7 +241,7 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendCard(
-            image: "assets/images/sanyalka.png",
+            image: "assets/potaFree/sanyalka.png",
             title: "สัญลักลักษณ์แทนการเคลื่อนไหว",
             country: "Symbols represent movement",
             press: () {
@@ -358,7 +358,7 @@ class RecomePlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/kud.png",
+            image: "assets/potaFree/kud.png",
             title: "เครื่องใช้ เครื่องแต่งกาย",
             country: "Costume",
 //            price: 440,
@@ -372,7 +372,7 @@ class RecomePlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/fimary.png",
+            image: "assets/potaFree/fimary.png",
             title: "บุคลากร ครอบครัว",
             country: "Personnel,family",
 //            price: 440,
@@ -403,7 +403,7 @@ class RecomePlants2 extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/food.png",
+            image: "assets/potaFree/food.png",
             title: "ผลไม้ ",
             country: "Fruit",
 //            price: 440,
@@ -417,7 +417,7 @@ class RecomePlants2 extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/patition.jpg",
+            image: "assets/potaFree/patition.jpg",
             title: "วัน เดือน ",
             country: "Day and Month",
 //            price: 440,
@@ -448,7 +448,7 @@ class RecomePlants3 extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/lokation.jpg",
+            image: "assets/potaFree/lokation.jpg",
             title: "สถานที่ จังหวัด",
             country: "Province location",
 //            price: 440,
@@ -462,7 +462,7 @@ class RecomePlants3 extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/num.jpg",
+            image: "assets/potaFree/num.jpg",
             title: "จำนวนนับ ตัวเลข",
             country: "Numerical number",
 //            price: 440,
@@ -493,7 +493,7 @@ class RecomePlants4 extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/anima.png",
+            image: "assets/potaFree/anima.png",
             title: "สัตว์",
             country: "Animal",
 //            price: 440,
@@ -507,7 +507,7 @@ class RecomePlants4 extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/kunnal.jpg",
+            image: "assets/potaFree/kunnal.jpg",
             title: "คุณลักษณะทั่วไป",
             country: "General feature",
 //            price: 440,
@@ -538,7 +538,7 @@ class RecomePlants5 extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/fadta.jpg",
+            image: "assets/potaFree/fadta.jpg",
             title: "เบ็ดเตล็ด",
             country: "miscellaneous",
 //            price: 440,

@@ -201,6 +201,15 @@ class es1 extends StatelessWidget {
             ),
             looping: true,
           ),
+
+          //          ChewieListItem(
+//            // This URL doesn't exist - will display an error
+//            videoPlayerController: VideoPlayerController.network(
+//              'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/error.mp4',
+//            ),
+//          ),
+
+
         ],
       ),
     );

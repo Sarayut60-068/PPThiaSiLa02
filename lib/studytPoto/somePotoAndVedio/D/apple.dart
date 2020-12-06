@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class apple extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class apple extends StatelessWidget {
         appBar: AppBar(
           title: Text('แอปเปิ้ล (apple)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('แอปเปิ้ล', 'assets/images/potoTSL/d/d26.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di2/di032.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%A5.mp4?alt=media&token=189cde29-671f-4313-bf18-d91ba1fbf61e',
               ),
-              looping: true,
             ),
           ],
         ),

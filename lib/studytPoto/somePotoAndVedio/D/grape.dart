@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class grape extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class grape extends StatelessWidget {
         appBar: AppBar(
           title: Text('องุ่น(grape)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('องุ่น', 'assets/images/potoTSL/d/d33.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di2/di031.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B8%AD%E0%B8%87%E0%B8%B8%E0%B9%88%E0%B8%99.mp4?alt=media&token=8563dba1-bf24-41f2-b13e-e7670fe96154',
               ),
-              looping: true,
             ),
           ],
         ),

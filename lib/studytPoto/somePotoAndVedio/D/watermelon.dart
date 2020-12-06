@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class watermelon extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class watermelon extends StatelessWidget {
         appBar: AppBar(
           title: Text('แตงโม (watermelon)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('แตงโม', 'assets/images/potoTSL/d/d19.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di2/di019.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B9%81%E0%B8%95%E0%B8%87%E0%B9%82%E0%B8%A1.mp4?alt=media&token=01b1433f-1e60-4dae-b433-4ad49755841d',
               ),
-              looping: true,
             ),
           ],
         ),

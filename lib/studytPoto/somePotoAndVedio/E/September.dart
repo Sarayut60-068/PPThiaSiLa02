@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/E5.dart';
 
 class September extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class September extends StatelessWidget {
         appBar: AppBar(
           title: Text('เดือนกันยายน (September)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => E5() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('เดือนกันยายน', 'assets/images/potoTSL/e/e16.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es3/es036.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/E%2F%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A2%E0%B8%B2%E0%B8%A2%E0%B8%99--.mp4?alt=media&token=082052da-a99e-4484-b3f1-d7be313b43a3',
               ),
-              looping: true,
             ),
           ],
         ),

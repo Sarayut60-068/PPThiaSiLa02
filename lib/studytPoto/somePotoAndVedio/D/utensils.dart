@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class papaya extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class papaya extends StatelessWidget {
         appBar: AppBar(
           title: Text('มะละกอ (papaya)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('มะละกอ ', 'assets/images/potoTSL/d/d21.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di2/di024.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%AD.mp4?alt=media&token=d5ffcc24-218d-48a3-b18f-e4d2b0499678',
               ),
-              looping: true,
             ),
         ],
         ),

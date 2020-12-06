@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
 
 class frog extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class frog extends StatelessWidget {
         appBar: AppBar(
           title: Text('กบ (frog)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H8() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('กบ', 'assets/images/potoTSL/h/h14.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es4/es055.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/H%2F%E0%B8%81%E0%B8%9A.mp4?alt=media&token=8719fbbc-86b6-46f2-b99e-b85345e19253',
               ),
-              looping: true,
             ),
           ],
         ),

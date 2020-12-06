@@ -29,7 +29,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_core: ^0.5.2
   firebase_auth: ^0.18.3
-  flutter_facebook_login: ^3.0.0
+# flutter_facebook_login: ^3.0.0
 
 
 
@@ -49,6 +49,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
+    - assets/potaFree/
     - assets/images/
     - assets/images/potoTSL/b/
     - assets/images/potoTSL/c/
@@ -128,7 +129,8 @@ flutter:
     - assets/videos/difficult/di1/
     - assets/videos/difficult/di2/
     - assets/videos/difficult/di3/
-    - assets/potaFree/
+
+
 
 
 

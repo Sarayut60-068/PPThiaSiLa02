@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
 
 class District extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class District extends StatelessWidget {
         appBar: AppBar(
           title: Text('ที่ว่าการอำเภอ (District)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => F6() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('ที่ว่าการอำเภอ', 'assets/images/potoTSL/f/f19.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/medium/me3/me012.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/F%2F%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD_1.mp4?alt=media&token=ef97f0ed-a982-4eba-ae23-8d0e0a14c13a',
               ),
-              looping: true,
             ),
           ],
         ),

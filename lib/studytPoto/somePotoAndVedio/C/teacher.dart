@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/chewie_list_item.dart';
+// ignore: unused_import
+import "package:thaisila02/studyVDO/di/video_player.dart";
+import 'package:thaisila02/studytPoto/C3.dart';
 
 class teacher extends StatelessWidget {
   @override
@@ -12,17 +16,27 @@ class teacher extends StatelessWidget {
         appBar: AppBar(
           title: Text('ครู (teacher)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => C3() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('ครู', 'assets/images/potoTSL/c/c10.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di1/di005.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/C%2F4%E0%B8%84%E0%B8%A3%E0%B8%B9.mp4?alt=media&token=f7852f46-1cf9-411a-99d4-f2fe8c6c7778',
               ),
-              looping: true,
             ),
+
+
           ],
         ),
       ),

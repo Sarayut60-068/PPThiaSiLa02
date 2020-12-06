@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/C3.dart';
 
 class brother extends StatelessWidget {
   @override
@@ -12,17 +13,26 @@ class brother extends StatelessWidget {
         appBar: AppBar(
           title: Text('น้อง (brother)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => C3() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('น้อง', 'assets/images/potoTSL/c/c05.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es1/es08.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/C%2F%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87.mp4?alt=media&token=0c360e41-7e39-4293-b161-0315359c9021',
               ),
-              looping: true,
             ),
+
           ],
         ),
       ),

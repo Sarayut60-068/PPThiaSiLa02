@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/E5.dart';
 
 class Monday extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class Monday extends StatelessWidget {
         appBar: AppBar(
           title: Text('วันจันทร์(Monday)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => E5() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('วันจันทร์', 'assets/images/potoTSL/e/e02.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es3/es048.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/E%2F%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C.mp4?alt=media&token=1565a717-4d7c-4607-a108-188f0f39d05e',
               ),
-              looping: true,
             ),
         ],
         ),

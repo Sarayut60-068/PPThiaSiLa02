@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
 
 class Postoffice extends StatelessWidget {
   @override
@@ -12,16 +13,25 @@ class Postoffice extends StatelessWidget {
         appBar: AppBar(
           title: Text('ที่ทำการไปรษณีย์ (Postoffice)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => F6() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('ที่ทำการไปรษณีย์', 'assets/images/potoTSL/f/f18.JPG'),
 
+
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/medium/me3/me011.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/F%2F%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%84%E0%B8%9B%E0%B8%A3%E0%B8%A9%E0%B8%93%E0%B8%B5%E0%B8%A2%E0%B9%8C_1.mp4?alt=media&token=6c679988-5d62-4309-87ea-a640eb422f1f',
               ),
-              looping: true,
             ),
           ],
         ),

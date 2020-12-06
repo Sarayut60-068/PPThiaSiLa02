@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/C3.dart';
 
 class police extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class police extends StatelessWidget {
         appBar: AppBar(
           title: Text('ตำรวจ (police)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => C3() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
-            Review('ปู่', 'assets/images/potoTSL/c/c06.JPG'),
+            Review('ตำรวจ', 'assets/images/potoTSL/c/c06.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di1/di005.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/C%2F6%E0%B8%95%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88.mp4?alt=media&token=e1bed07c-f87b-4719-b35f-ba15ce9f0f2b',
               ),
-              looping: true,
             ),
           ],
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
 
 class crab extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class crab extends StatelessWidget {
         appBar: AppBar(
           title: Text('ปู (crab)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H8() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('ปู', 'assets/images/potoTSL/h/h20.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es4/es070.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/H%2F%E0%B8%9B%E0%B8%B9.mp4?alt=media&token=f5be93ee-e2ec-4c07-94c3-6468b07367f5',
               ),
-              looping: true,
             ),
           ],
         ),

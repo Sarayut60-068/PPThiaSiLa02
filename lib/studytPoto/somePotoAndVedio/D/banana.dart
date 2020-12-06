@@ -2,28 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/D4.dart';
 
 class banana extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       home: Scaffold(
         appBar: AppBar(
           title: Text('กล้วย(banana)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => D4() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('กล้วย', 'assets/images/potoTSL/d/d14.JPG'),
-
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di1/di001.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/D%2F%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%A2.mp4?alt=media&token=211dec05-5469-45c8-8451-ea9b20b938de',
               ),
-              looping: true,
             ),
-        ],
+          ],
         ),
       ),
     );
@@ -35,10 +42,10 @@ class Review extends StatelessWidget {
   final String _imageUrl;
 
   const Review(
-      this._text,
-      this._imageUrl, {
-        Key key,
-      }) : super(key: key);
+    this._text,
+    this._imageUrl, {
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +60,7 @@ class Review extends StatelessWidget {
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
                   fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
-              ),
+                  ),
             ),
           ),
           Padding(
@@ -75,4 +82,3 @@ class Review extends StatelessWidget {
     );
   }
 }
-

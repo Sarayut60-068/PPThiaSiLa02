@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
 
 class shrimp extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class shrimp extends StatelessWidget {
         appBar: AppBar(
           title: Text('กุ้ง (shrimp)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H8() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('กุ้ง', 'assets/images/potoTSL/h/h19.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es4/es060.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/H%2F%E0%B8%81%E0%B8%B8%E0%B9%89%E0%B8%87.mp4?alt=media&token=bd9a19f0-0f36-48e5-b06a-7f861fe4bf81',
               ),
-              looping: true,
             ),
           ],
         ),

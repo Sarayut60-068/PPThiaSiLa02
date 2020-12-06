@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
 
 class homehome extends StatelessWidget {
   @override
@@ -12,15 +13,23 @@ class homehome extends StatelessWidget {
         appBar: AppBar(
           title: Text('บ้าน (Home)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => F6() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('บ้าน', 'assets/images/potoTSL/f/f25.JPG'),
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/medium/me3/me013.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/F%2F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99_1.mp4?alt=media&token=ab47c9fd-db1f-4dc3-9f5b-74910e35020b',
               ),
-              looping: true,
             ),
         ],
         ),

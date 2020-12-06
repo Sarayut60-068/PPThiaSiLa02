@@ -545,7 +545,7 @@ Widget GoogleLog() => Container(
            mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
              Center(
-               child: ImageIcon(AssetImage('assets/google_logo.png')),
+               child: ImageIcon(AssetImage('assets/Goog_logo.png')),
              ),
              SizedBox(width: 10.0),
              Center(

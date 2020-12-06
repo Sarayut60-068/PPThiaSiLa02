@@ -18,10 +18,10 @@ class December extends StatelessWidget {
             Review('เดือนธันวาคม', 'assets/images/potoTSL/e/e19.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es3/es039.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/E%2F%E0%B8%98%E0%B8%B1%E0%B8%99%E0%B8%A7%E0%B8%B2%E0%B8%84%E0%B8%A1.mp4?alt=media&token=d8333108-f5c3-4150-ad86-8c4af524c28c',
               ),
-              looping: true,
             ),
           ],
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
 
 class Hospital extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class Hospital extends StatelessWidget {
         appBar: AppBar(
           title: Text('โรงพยาบาล (Hospital)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => F6() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('โรงพยาบาล', 'assets/images/potoTSL/f/f20.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/medium/me3/me016.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/F%2F%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5_1.mp4?alt=media&token=ef128fa4-c3b7-4ee6-82bc-78b072245db3',
               ),
-              looping: true,
             ),
           ],
         ),

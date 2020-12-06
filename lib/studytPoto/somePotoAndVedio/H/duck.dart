@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
 
 class duck extends StatelessWidget {
   @override
@@ -12,15 +13,23 @@ class duck extends StatelessWidget {
         appBar: AppBar(
           title: Text('เป็ด (duck)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H8() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('เป็ด', 'assets/images/potoTSL/h/h13.JPG'),
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es4/es071.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/H%2F%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%94.mp4?alt=media&token=62ca77e6-3432-4aeb-be9c-c8d940abd364',
               ),
-              looping: true,
             ),
         ],
         ),

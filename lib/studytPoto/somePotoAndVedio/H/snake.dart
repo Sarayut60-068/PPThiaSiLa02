@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/H8.dart';
 
 class snake extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class snake extends StatelessWidget {
         appBar: AppBar(
           title: Text('งู (snake)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => H8() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('งู', 'assets/images/potoTSL/h/h15.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es4/es064.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/H%2F%E0%B8%87%E0%B8%B9.mp4?alt=media&token=a74344c3-5d5b-41ea-820f-4a7f5f41d281',
               ),
-              looping: true,
             ),
           ],
         ),

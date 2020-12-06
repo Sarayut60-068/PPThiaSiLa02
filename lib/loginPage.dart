@@ -58,7 +58,7 @@ class SecondPage extends StatelessWidget {
                 currentAccountPicture: GestureDetector(
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(
-                        "https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-9/75550501_2495230860553086_3725527281922211840_o.jpg?_nc_cat=101&_nc_sid=0be424&_nc_eui2=AeHavvWDPNtalcv3ftMKcparj3k5M5cnaNWPeTkzlydo1Y_SWkDNm8yIz4IM1cvkMSIMp1PSf3tvlbzqAnayfNEw&_nc_ohc=nHQ4MbVHAj0AX8W31FJ&_nc_ht=scontent.fbkk5-6.fna&oh=37983ee65a11161f74d176203b5ac042&oe=5EB2B820"),
+                        "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/117391812_3267808156645768_8112608958050632131_o.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=2eVlnf41qAYAX8Td_IH&_nc_ht=scontent.fbkk14-1.fna&oh=9e64026d2b5efe5e89b384907c86ca89&oe=5FE1C267"),
                   ),
                 ),
                 decoration: BoxDecoration(
@@ -575,7 +575,7 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/stu.png",
+            image: "assets/potaFree/stu.png",
             title: "สื่อการสอน",
             country: "Teaching materials",
 //            price: 440,
@@ -589,7 +589,7 @@ class RecomendsPlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/setan.png",
+            image: "assets/potaFree/setan.png",
             title: "ประโยค",
             country: "Sentence",
 //            price: 440,
@@ -778,11 +778,11 @@ class FeaturedPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           FeaturePlantCard(
-            image: "assets/images/garm.jpg",
+            image: "assets/potaFree/garm.jpg",
             press: () {},
           ),
           FeaturePlantCard(
-            image: "assets/images/kanaa.ipg",
+            image: "assets/potaFree/kanaa.jpg",
             press: () {},
           ),
         ],

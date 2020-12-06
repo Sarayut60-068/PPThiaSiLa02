@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/C3.dart';
 
 class nurse extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class nurse extends StatelessWidget {
         appBar: AppBar(
           title: Text('พยาบาล (nurse)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => C3() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('พยาบาล', 'assets/images/potoTSL/c/c11.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/difficult/di1/di006.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/C%2F5%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5.mp4?alt=media&token=1ebd6ead-0ef8-4afc-820d-347843430992',
               ),
-              looping: true,
             ),
           ],
         ),

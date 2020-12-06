@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/C3.dart';
 
 class grandfather extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class grandfather extends StatelessWidget {
         appBar: AppBar(
           title: Text('ปู่ (grandfather)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => C3() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('ปู่', 'assets/images/potoTSL/c/c06.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/easy/es1/es09.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/C%2F%E0%B8%9B%E0%B8%B9%E0%B9%88.mp4?alt=media&token=54428f50-f678-4604-abd8-0c2304d738a8',
               ),
-              looping: true,
             ),
         ],
         ),

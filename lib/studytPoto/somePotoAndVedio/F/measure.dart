@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../chewie_list_item.dart';
+import 'package:thaisila02/studytPoto/F6.dart';
 
 class measure extends StatelessWidget {
   @override
@@ -12,16 +13,24 @@ class measure extends StatelessWidget {
         appBar: AppBar(
           title: Text('วัด (measure)'),
           backgroundColor: Colors.purpleAccent,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => F6() ));
+                })
+          ],
         ),
         body: ListView(
           children: [
             Review('วัด', 'assets/images/potoTSL/f/f23.JPG'),
 
             ChewieListItem(
-              videoPlayerController: VideoPlayerController.asset(
-                'assets/videos/medium/me3/me019.mp4',
+              // This URL doesn't exist - will display an error
+              videoPlayerController: VideoPlayerController.network(
+                'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/F%2F%E0%B8%A7%E0%B8%B1%E0%B8%94_1.mp4?alt=media&token=1ee630f6-b279-4aee-84b3-c272892364f3',
               ),
-              looping: true,
             ),
           ],
         ),

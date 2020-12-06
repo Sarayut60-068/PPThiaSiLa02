@@ -16,19 +16,7 @@ class ladle extends StatelessWidget {
         body: ListView(
           children: [
             Review('จวัก ', 'assets/images/potoTSL/b/b02.JPG'),
-//            RaisedButton(
-//              color: Colors.red,
-//              child: Text(
-//                'อาชีพ',
-//                style: TextStyle(color: Colors.white),
-//              ),
-//            ),
-//            ChewieListItem(
-//              videoPlayerController: VideoPlayerController.asset(
-//                'assets/videos/difficult/di1/di001.mp4',
-//              ),
-//              looping: true,
-//            ),
+
           ],
         ),
       ),
