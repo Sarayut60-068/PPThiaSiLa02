@@ -4,7 +4,7 @@ import 'package:video_player/video_player.dart';
 import '../../../chewie_list_item.dart';
 import 'package:thaisila02/chewie_list_item.dart';
 // ignore: unused_import
-import "package:thaisila02/studyVDO/di/video_player.dart";
+
 import 'package:thaisila02/studytPoto/C3.dart';
 
 class teacher extends StatelessWidget {

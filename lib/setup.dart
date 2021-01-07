@@ -12,7 +12,8 @@ class setup extends StatelessWidget{
           title: Text('Welcome to Search'),
           backgroundColor: Colors.grey,
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.search), onPressed: () {
+            IconButton(icon: Icon(Icons.search),
+                onPressed: () {
               showSearch(context: context, delegate: DataSearch());
             })
           ],

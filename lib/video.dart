@@ -26,10 +26,10 @@ class video extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             RaisedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => evideo()));
-              },
+//              onPressed: () {
+//                Navigator.push(context,
+//                    MaterialPageRoute(builder: (context) => evideo()));
+//              },
               color: Colors.green,
               child: Text(
                 'Easy level',
@@ -38,10 +38,10 @@ class video extends StatelessWidget {
             ),
 
             RaisedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => mvideo()));
-              },
+//              onPressed: () {
+//                Navigator.push(context,
+//                    MaterialPageRoute(builder: (context) => mvideo()));
+//              },
               color: Colors.lightBlueAccent,
               child: Text(
                 'Medium level',
@@ -50,10 +50,10 @@ class video extends StatelessWidget {
             ),
 
             RaisedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => dvideo()));
-              },
+//              onPressed: () {
+//                Navigator.push(context,
+//                    MaterialPageRoute(builder: (context) => dvideo()));
+//              },
               color: Colors.red,
               child: Text(
                 'Difficult level',

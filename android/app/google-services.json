@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1076142360813",
-    "firebase_url": "https://thai-sila-psu.firebaseio.com",
-    "project_id": "thai-sila-psu",
-    "storage_bucket": "thai-sila-psu.appspot.com"
+    "project_number": "815987462776",
+    "firebase_url": "https://thaisila02.firebaseio.com",
+    "project_id": "thaisila02",
+    "storage_bucket": "thaisila02.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1076142360813:android:afa238dc6bf40e8ca0a4e4",
+        "mobilesdk_app_id": "1:815987462776:android:be6b575718094a182b138d",
         "android_client_info": {
-          "package_name": "thai_.sila3"
+          "package_name": "com.example.thaisila02"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1076142360813-d6pa2cup8tc7pmlj9l9o4f0rqmnkgru4.apps.googleusercontent.com",
+          "client_id": "815987462776-u2c0hfgrll1nbupvkggecolj5hjvj3k1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDDAzgz0aPM1mKR-Csyl7vsmHjHof4vIw4"
+          "current_key": "AIzaSyB-YCydD-88pHK68YYaQHVuEtqZsD-QIys"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1076142360813-d6pa2cup8tc7pmlj9l9o4f0rqmnkgru4.apps.googleusercontent.com",
+              "client_id": "815987462776-u2c0hfgrll1nbupvkggecolj5hjvj3k1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

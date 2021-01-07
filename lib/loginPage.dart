@@ -11,6 +11,7 @@ import 'study.dart';
 import 'ai.dart';
 import 'video.dart';
 import 'constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class SecondPage extends StatelessWidget {
   @override
@@ -85,16 +86,9 @@ class SecondPage extends StatelessWidget {
               ListTile(
                 title: Text('Log out'),
                 trailing: Icon(Icons.exit_to_app),
-//                  onTap: () {
-//                    Navigator.push(
-//                        context,
-//                        MaterialPageRoute(
-//                            builder: (context) => LoginPage()));
-//                  },
-                onTap: () {
-                  MaterialPageRoute route = MaterialPageRoute(builder: (value) => LoginPage());
-                  Navigator.push(context, route);
-                },
+              onTap: () async {
+                  await FirebaseAuth.instance.signOut();
+              },
               ),
               //Divider(),
             ],
