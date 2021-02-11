@@ -24,7 +24,7 @@ class brother extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Review('น้อง', 'assets/images/potoTSL/c/c05.JPG'),
+            Review('น้อง', 'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fc%2Fc05.JPG?alt=media&token=7c753e0c-b97e-47fc-b8d3-ae73e8187a2e'),
 
             ChewieListItem(
               // This URL doesn't exist - will display an error
@@ -62,7 +62,9 @@ class Review extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  fit: BoxFit.cover,
+//                  image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  image: NetworkImage(_imageUrl)
               ),
             ),
           ),

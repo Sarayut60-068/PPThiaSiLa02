@@ -28,25 +28,26 @@ class A1 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                      new Container(
-                      child: new Image.asset('assets/images/001.jpg'),
+//                      child: new Image.asset('assets/images/001.jpg'),
+                       child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F001.jpg?alt=media&token=fc17058a-d535-40a0-9e40-f79c479ebe74"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/002.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F002.jpg?alt=media&token=f2151860-ccfd-4154-97f6-5dd4ccab8064"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/003.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F003.jpg?alt=media&token=66e713f1-a47d-4e4f-8e7f-edf49537dc6a"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/004.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F004.jpg?alt=media&token=025470e7-a0aa-44a3-8641-2f8a50afda9e"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/005.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F005.jpg?alt=media&token=b79f300d-5f25-4146-a778-af498c9785b9"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/006.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F006.jpg?alt=media&token=eb7d36f1-1147-4950-ad57-1126caf023cf"),
                     ),
                     new Container(
-                      child: new Image.asset('assets/images/007.jpg'),
+                      child: new Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fa%2F007.jpg?alt=media&token=e67126e2-29f8-4e56-a79a-4a9b4cacf275"),
                     ),
 
                   ],

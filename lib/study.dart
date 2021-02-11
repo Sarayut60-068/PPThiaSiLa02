@@ -12,6 +12,7 @@ import 'package:thaisila02/studytPoto/J10.dart';
 import 'constants.dart';
 import 'loginPage.dart';
 import 'home.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class study extends StatelessWidget {
   @override
@@ -19,9 +20,15 @@ class study extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       title: 'Study',
+      theme: ThemeData(
+        fontFamily: "Cairo",
+        scaffoldBackgroundColor: kBackgroundColorstudy,
+        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
+    ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Welcome to Stady'),
+          elevation: 0,
           backgroundColor: Colors.green,
         ),
         floatingActionButton: FloatingActionButton(
@@ -32,336 +39,44 @@ class study extends StatelessWidget {
           child: Icon(Icons.home),
           backgroundColor: Colors.green,
         ),
-        body: SafeArea(
-          child: ListView(
-            children: <Widget>[
-              RecomendsPlants(),
-              RecomePlants(),
-              RecomePlants2(),
-              RecomePlants3(),
-              RecomePlants4(),
-              RecomePlants5(),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => A1()));
-//                      },
-//                      color: Colors.purple,
-//                      child: Text(
-//                        'สัญลักลักษณ์แทนการเคลื่อนไหว',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => B2()));
-//                      },
-//                      color: Colors.blue,
-//                      child: Text(
-//                        'เครื่องใช้ เครื่องแต่งกาย',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => C3()));
-//                      },
-//                      color: Colors.lightBlueAccent,
-//                      child: Text(
-//                        'บุคลากร ครอบครัว อาชีพ',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => D4()));
-//                      },
-//                      color: Colors.green,
-//                      child: Text(
-//                        'ผัก ผลไม้ อาหาร',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => E5()));
-//                      },
-//                      color: Colors.yellow,
-//                      child: Text(
-//                        'วัน เดือน ปี เวลา',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => F6()));
-//                      },
-//                      color: Colors.orange,
-//                      child: Text(
-//                        'สถานที่ จังหวัด',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => G7()));
-//                      },
-//                      color: Colors.red,
-//                      child: Text(
-//                        'จำนวนนับ ตัวเลข',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => H8()));
-//                      },
-//                      color: Colors.pinkAccent,
-//                      child: Text(
-//                        'สัตว์',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => I9()));
-//                      },
-//                      color: Colors.purpleAccent,
-//                      child: Text(
-//                        'คุณลักษณะทั่วไป',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-//              Container(
-//                child: ButtonBar(
-//                  alignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton(
-//                      onPressed: () {
-//                        Navigator.push(context,
-//                            MaterialPageRoute(builder: (context) => J10()));
-//                      },
-//                      color: Colors.deepPurple,
-//                      child: Text(
-//                        'เบ็ตเตล็ด',
-//                        style: TextStyle(color: Colors.white),
-//                      ),
-//                    ),
-//                  ],
-//                ),
-//              ),
-            ],
-          ),
-        ),
+        body: StudyScreen(),
       ),
     );
   }
 }
 
-class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
-    Key key,
-  }) : super(key: key);
 
+///////////////////////ของใหม่//////////////////////
+class StudyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
+    var size = MediaQuery.of(context)
+        .size; //this gonna give us total height and with of our device
+    return Scaffold(
+          body: Stack(
         children: <Widget>[
-          RecomendCard(
-            image: "assets/potaFree/sanyalka.png",
-            title: "สัญลักลักษณ์แทนการเคลื่อนไหว",
-            country: "Symbols represent movement",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => A1(),
-                ),
-              );
-            },
-          ),
-//          RecomendPlantCard(
-//            image: "assets/images/2.jpg",
-//            title: "Angelica",
-//            country: "Russia",
-////            price: 440,
-//            press: () {
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(
-//                  builder: (context) => study(),
-//                ),
-//              );
-//            },
-//          ),
-        ],
-      ),
-    );
-  }
-}
-
-class RecomendCard extends StatelessWidget {
-  const RecomendCard({
-    Key key,
-    this.image,
-    this.title,
-    this.country,
-//    this.price,
-    this.press,
-  }) : super(key: key);
-
-  final String image, title, country;
-//  final int price;
-  final Function press;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.only(
-        left: kDefaultPadding,
-        top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 2.5,
-      ),
-      width: size.width * 0.8,
-      child: Column(
-        children: <Widget>[
-          Image.asset(image),
-          GestureDetector(
-            onTap: press,
-            child: Container(
-              padding: EdgeInsets.all(kDefaultPadding / 2),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 50,
-                    color: kPrimaryColor.withOpacity(0.23),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: <Widget>[
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: "$title\n".toUpperCase(),
-                            style: Theme.of(context).textTheme.button),
-                        TextSpan(
-                          text: "$country".toUpperCase(),
-                          style: TextStyle(
-                            color: kPrimaryColor.withOpacity(0.5),
-                          ),
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      children: <Widget>[
+                        StudyScreen2 (
+                          title: "สัญลักลักษณ์แทนการเคลื่อนไหว",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fhand.svg?alt=media&token=25517de1-f9ff-4a23-9717-b1ba91ad5c88",
+                          press:  () {
+                            Navigator.push(
+                                  context,
+                                MaterialPageRoute(
+                                 builder: (context) => A1(),
+                                    ),
+                                  );
+                                },
                         ),
-                      ],
-                    ),
-                  ),
-                  Spacer(),
-                ],
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class RecomePlants extends StatelessWidget {
-  const RecomePlants({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/potaFree/kud.png",
-            title: "เครื่องใช้ เครื่องแต่งกาย",
-            country: "Costume",
-//            price: 440,
+                        StudyScreen2 (
+                          title: "เครื่องใช้ เครื่องแต่งกาย",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fspatula.svg?alt=media&token=350984cf-0a78-4911-b05e-41aab139a039",
             press: () {
               Navigator.push(
                 context,
@@ -370,13 +85,11 @@ class RecomePlants extends StatelessWidget {
                 ),
               );
             },
-          ),
-          RecomendPlantCard(
-            image: "assets/potaFree/fimary.png",
-            title: "บุคลากร ครอบครัว",
-            country: "Personnel,family",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "บุคลากร ครอบครัว",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Ffamily.svg?alt=media&token=e2d3d072-7055-4880-8e87-bac5faecd529",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -384,29 +97,10 @@ class RecomePlants extends StatelessWidget {
                 ),
               );
             },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class RecomePlants2 extends StatelessWidget {
-  const RecomePlants2({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/potaFree/food.png",
-            title: "ผลไม้ ",
-            country: "Fruit",
-//            price: 440,
+                        ),
+                        StudyScreen2 (
+                          title: "ผลไม้ ",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Ffruits.svg?alt=media&token=c294cdd6-6b4b-452f-a0b6-0998d1d9df08",
             press: () {
               Navigator.push(
                 context,
@@ -415,12 +109,10 @@ class RecomePlants2 extends StatelessWidget {
                 ),
               );
             },
-          ),
-          RecomendPlantCard(
-            image: "assets/potaFree/patition.jpg",
-            title: "วัน เดือน ",
-            country: "Day and Month",
-//            price: 440,
+                        ),
+                        StudyScreen2 (
+                          title: "วัน เดือน",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fschedule.svg?alt=media&token=3a7845bc-7490-4e0c-af01-63b0df494ea6",
             press: () {
               Navigator.push(
                 context,
@@ -429,30 +121,11 @@ class RecomePlants2 extends StatelessWidget {
                 ),
               );
             },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class RecomePlants3 extends StatelessWidget {
-  const RecomePlants3({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/potaFree/lokation.jpg",
-            title: "สถานที่ จังหวัด",
-            country: "Province location",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "สถานที่ จังหวัด",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fplace.svg?alt=media&token=2d93fd5d-3779-4f53-bdc0-4db44fdfc69b",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -460,13 +133,11 @@ class RecomePlants3 extends StatelessWidget {
                 ),
               );
             },
-          ),
-          RecomendPlantCard(
-            image: "assets/potaFree/num.jpg",
-            title: "จำนวนนับ ตัวเลข",
-            country: "Numerical number",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "จำนวนนับ ตัวเลข ",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fnumbers.svg?alt=media&token=50ade57c-9045-4dc7-9242-32fe518a41ed",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -474,30 +145,11 @@ class RecomePlants3 extends StatelessWidget {
                 ),
               );
             },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class RecomePlants4 extends StatelessWidget {
-  const RecomePlants4({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/potaFree/anima.png",
-            title: "สัตว์",
-            country: "Animal",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "สัตว์",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fpet.svg?alt=media&token=6d3c3e27-1e3d-4354-bbd4-aa89306657b7",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -505,13 +157,11 @@ class RecomePlants4 extends StatelessWidget {
                 ),
               );
             },
-          ),
-          RecomendPlantCard(
-            image: "assets/potaFree/kunnal.jpg",
-            title: "คุณลักษณะทั่วไป",
-            country: "General feature",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "คุณลักษณะทั่วไป",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fvisionary.svg?alt=media&token=30921049-0de5-48ef-a5bf-4f92fb437a64",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -519,30 +169,11 @@ class RecomePlants4 extends StatelessWidget {
                 ),
               );
             },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class RecomePlants5 extends StatelessWidget {
-  const RecomePlants5({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/potaFree/fadta.jpg",
-            title: "เบ็ดเตล็ด",
-            country: "miscellaneous",
-//            price: 440,
-            press: () {
+                        ),
+                        StudyScreen2 (
+                          title: "เบ็ดเตล็ด ",
+                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FpotoStudy%2Fteam-work.svg?alt=media&token=5d649153-22c4-4489-8b62-7ecc6a47613c",
+                          press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -550,9 +181,72 @@ class RecomePlants5 extends StatelessWidget {
                 ),
               );
             },
-          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+      ),
+    );
+  }
+}
 
-        ],
+class StudyScreen2 extends StatelessWidget {
+  final String svgSrc;
+  final String title;
+  final Function press;
+  const StudyScreen2 ({
+    Key key,
+    this.svgSrc,
+    this.title,
+    this.press,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(13),
+      child: Container(
+        // padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(13),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 17),
+              blurRadius: 17,
+              spreadRadius: -23,
+              color: kShadowColor,
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: press,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: <Widget>[
+                  Spacer(),
+                  SvgPicture.network(svgSrc,
+                  height: 100,
+                  width: 80,
+                ),
+                  Spacer(),
+                  Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context)
+                        .textTheme
+                        .title
+                        .copyWith(fontSize: 15),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

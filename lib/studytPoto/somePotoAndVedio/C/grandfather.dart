@@ -24,7 +24,7 @@ class grandfather extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Review('ปู่', 'assets/images/potoTSL/c/c06.JPG'),
+            Review('ปู่', 'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fc%2Fc06.JPG?alt=media&token=d802d696-7f11-4011-94e2-c0de862c63e1'),
 
             ChewieListItem(
               // This URL doesn't exist - will display an error
@@ -61,7 +61,7 @@ class Review extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  fit: BoxFit.cover, image: NetworkImage(_imageUrl) //จัดขนาดภาพ
               ),
             ),
           ),

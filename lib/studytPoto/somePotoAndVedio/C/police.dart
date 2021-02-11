@@ -24,7 +24,7 @@ class police extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Review('ตำรวจ', 'assets/images/potoTSL/c/c06.JPG'),
+            Review('ตำรวจ', 'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fc%2Fc13.JPG?alt=media&token=e03e251c-6497-4a0d-8bf1-bdc3d951fa32'),
 
             ChewieListItem(
               // This URL doesn't exist - will display an error
@@ -61,7 +61,7 @@ class Review extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  fit: BoxFit.cover, image: NetworkImage(_imageUrl) //จัดขนาดภาพ
               ),
             ),
           ),

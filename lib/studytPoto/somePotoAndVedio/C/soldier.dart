@@ -24,7 +24,7 @@ class soldier extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Review('ทหาร', 'assets/images/potoTSL/c/c12.JPG'),
+            Review('ทหาร', 'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fc%2Fc12.JPG?alt=media&token=4c72599c-33b8-4336-93ca-5e35dfeab4d7'),
 
             ChewieListItem(
               // This URL doesn't exist - will display an error
@@ -61,7 +61,7 @@ class Review extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  fit: BoxFit.cover, image: NetworkImage(_imageUrl) //จัดขนาดภาพ
               ),
             ),
           ),

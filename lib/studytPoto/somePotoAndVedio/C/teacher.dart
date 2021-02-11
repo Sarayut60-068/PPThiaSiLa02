@@ -27,7 +27,7 @@ class teacher extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Review('ครู', 'assets/images/potoTSL/c/c10.JPG'),
+            Review('ครู', 'https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/poto-image%2Fc%2Fc10.JPG?alt=media&token=d6c91e2c-0765-41eb-8f17-dfe98680a3f1'),
 
             ChewieListItem(
               // This URL doesn't exist - will display an error
@@ -66,7 +66,7 @@ class Review extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), //กำหนดขอบมน
               image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(_imageUrl) //จัดขนาดภาพ
+                  fit: BoxFit.cover, image: NetworkImage(_imageUrl) //จัดขนาดภาพ
               ),
             ),
           ),
