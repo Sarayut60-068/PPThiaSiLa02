@@ -25,8 +25,9 @@ class SecondPage extends StatelessWidget {
         fontFamily: "Cairo",
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
-    ),
-      home: HomeScreen(),);
+      ),
+      home: HomeScreen(),
+    );
 //       home: Scaffold(
 // //        backgroundColor: Colors.transparent,
 //         appBar: AppBar(
@@ -104,8 +105,6 @@ class SecondPage extends StatelessWidget {
 //             ],
 //           ),
 //         ),
-
-
 
 //         body: Container(
 //             child: Body(),
@@ -204,9 +203,6 @@ class SecondPage extends StatelessWidget {
 // //              ),
 // //            ],
 // //          ),
-
-
-
 
 // //          child: Column(
 // //            mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -426,9 +422,7 @@ class Body extends StatelessWidget {
 //   }
 //}
 
-
 class DataSearch extends SearchDelegate<String> {
-
   final cities = [
     "ham",
     "sarayut",
@@ -556,17 +550,16 @@ class HeaderWithSearchBox extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
-                Image.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Ficon.png?alt=media&token=ce4ca12e-f874-4c90-96bf-aaf5276fb2d6")
+                Image.network(
+                    "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Ficon.png?alt=media&token=ce4ca12e-f874-4c90-96bf-aaf5276fb2d6")
               ],
             ),
           ),
-
         ],
       ),
     );
   }
 }
-
 
 class RecomendsPlants extends StatelessWidget {
   const RecomendsPlants({
@@ -607,20 +600,20 @@ class RecomendsPlants extends StatelessWidget {
               );
             },
           ),
-         RecomendPlantCard(
-           image: "assets/images/3.JPG",
-           title: "คะแนน",
-           country: "score",
+          RecomendPlantCard(
+            image: "assets/images/3.JPG",
+            title: "คะแนน",
+            country: "score",
 //            price: 440,
-           press: () {
-             Navigator.push(
-               context,
-               MaterialPageRoute(
-                 builder: (context) => study(),
-               ),
-             );
-           },
-         ),
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => study(),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
@@ -829,6 +822,7 @@ class FeaturePlantCard extends StatelessWidget {
     );
   }
 }
+
 ////////////////////////////////ของใหม่ฝุดๆ///////////////////////////////////////////////////
 class HomeScreen extends StatelessWidget {
   @override
@@ -846,7 +840,8 @@ class HomeScreen extends StatelessWidget {
               color: Color(0xFFCCFFFF),
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
-                image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fclouds.png?alt=media&token=b576ee61-884f-4787-a3aa-12bce5e2ccd3"),
+                image: NetworkImage(
+                    "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fclouds.png?alt=media&token=b576ee61-884f-4787-a3aa-12bce5e2ccd3"),
               ),
             ),
           ),
@@ -866,7 +861,8 @@ class HomeScreen extends StatelessWidget {
                         color: Color(0xFFF2BEA1),
                         shape: BoxShape.circle,
                       ),
-                      child: SvgPicture.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fmenu.svg?alt=media&token=4321e660-f305-453f-852f-51b5df8f1477"),
+                      child: SvgPicture.network(
+                          "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fmenu.svg?alt=media&token=4321e660-f305-453f-852f-51b5df8f1477"),
                     ),
                   ),
                   Text(
@@ -886,24 +882,27 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         CategoryCard(
                           title: "สื่อการสอน",
-                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Freading.svg?alt=media&token=35366470-f49d-497e-9288-78d6b875250f",
-                          press:  () {
-             Navigator.push(
-               context,
-               MaterialPageRoute(
-                 builder: (context) => study(),
-               ),
-             );
-           },
+                          svgSrc:
+                              "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Freading.svg?alt=media&token=35366470-f49d-497e-9288-78d6b875250f",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => study(),
+                              ),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "แบบทดสอบ",
-                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fgame-console.svg?alt=media&token=ec53a4b9-b33a-44b4-83b9-7ca7d3219cdd",
+                          svgSrc:
+                              "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fgame-console.svg?alt=media&token=ec53a4b9-b33a-44b4-83b9-7ca7d3219cdd",
                           press: () {},
                         ),
                         CategoryCard(
                           title: "คะแนน",
-                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fscore.svg?alt=media&token=e5de0d3f-47ba-4621-b327-9b8425282cc4",
+                          svgSrc:
+                              "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fscore.svg?alt=media&token=e5de0d3f-47ba-4621-b327-9b8425282cc4",
                           press: () {
                             Navigator.push(
                               context,
@@ -915,7 +914,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         CategoryCard(
                           title: "ThaiSiLa ",
-                          svgSrc: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FUntitled-1.svg?alt=media&token=22d46f56-fd20-4ca1-84d7-80da2e29200c",
+                          svgSrc:
+                              "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FUntitled-1.svg?alt=media&token=22d46f56-fd20-4ca1-84d7-80da2e29200c",
                           press: () {},
                         ),
                       ],
@@ -930,7 +930,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
@@ -970,10 +969,11 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Spacer(),
-                  SvgPicture.network(svgSrc,
-                  height: 100,
-                  width: 80,
-                ),
+                  SvgPicture.network(
+                    svgSrc,
+                    height: 100,
+                    width: 80,
+                  ),
                   Spacer(),
                   Text(
                     title,
@@ -993,7 +993,6 @@ class CategoryCard extends StatelessWidget {
   }
 }
 
-
 class SearchBar extends StatelessWidget {
   const SearchBar({
     Key key,
@@ -1009,27 +1008,29 @@ class SearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(29.5),
       ),
       child: 
-      TextField(
-        decoration: InputDecoration(
-          hintText: "Search",
-          icon: SvgPicture.network("https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fsearch.svg?alt=media&token=824bc34d-4a92-4519-bd28-c0e1e4063a3c"),
-          border: InputBorder.none,
-          ),
-      //     Builder(
-      //        builder: (context) => IconButton(
-      //          icon: Icon(Icons.search),
-      //          onPressed: () {
-      //       Navigator.push(context,
-      //           MaterialPageRoute(builder: (context) => CloudFirestoreSearch()));
-      //     },
-      // ),
-          ),
+      // TextField(
+        // decoration: InputDecoration(
+        //   hintText: "Search",
+        //   icon: SvgPicture.network(
+        //       "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fsearch.svg?alt=media&token=824bc34d-4a92-4519-bd28-c0e1e4063a3c"),
+        //   border: InputBorder.none,
+        // ),
+
+            Builder(
+               builder: (context) => IconButton(
+                 icon: Icon(Icons.search),
+                 onPressed: () {
+              Navigator.push(context,
+                  // MaterialPageRoute(builder: (context) => CloudFirestoreSearch()));
+                   MaterialPageRoute(builder: (context) => SearcPageDate()));
+            },
+        ),
+      ),
+
+      
     );
   }
 }
-
-
-
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -1047,10 +1048,11 @@ class BottomNavBar extends StatelessWidget {
         children: <Widget>[
           BottomNavItem(
             title: "LogOut",
-            svgScr: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Flogout.svg?alt=media&token=f4b8e35d-78c8-4d99-bc29-b5ce0b95dbca",
+            svgScr:
+                "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Flogout.svg?alt=media&token=f4b8e35d-78c8-4d99-bc29-b5ce0b95dbca",
             press: () async {
-                  await FirebaseAuth.instance.signOut();
-              },
+              await FirebaseAuth.instance.signOut();
+            },
           ),
           // BottomNavItem(
           //   title: "All Exercises",
@@ -1059,7 +1061,8 @@ class BottomNavBar extends StatelessWidget {
           // ),
           BottomNavItem(
             title: "Profile",
-            svgScr: "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fuser.svg?alt=media&token=bdce9f2c-5a80-4c1a-90d9-4981f8b83161",
+            svgScr:
+                "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fuser.svg?alt=media&token=bdce9f2c-5a80-4c1a-90d9-4981f8b83161",
           ),
         ],
       ),
@@ -1102,4 +1105,3 @@ class BottomNavItem extends StatelessWidget {
     );
   }
 }
-

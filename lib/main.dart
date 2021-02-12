@@ -4,8 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:thaisila02/loginPage.dart';
 import 'package:thaisila02/screens/LoginPage.dart';
 
-
-
 //import 'dart:convert';
 //import 'package:dio/dio.dart';
 //import 'package:flutter/material.dart';
@@ -613,7 +611,6 @@ class MyApp extends StatelessWidget {
 }
 
 class LandingPage extends StatelessWidget {
-
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   @override
@@ -621,7 +618,7 @@ class LandingPage extends StatelessWidget {
     return FutureBuilder(
       future: _initialization,
       builder: (context, snapshot) {
-        if(snapshot.hasError) {
+        if (snapshot.hasError) {
           return Scaffold(
             body: Center(
               child: Text("Error:  ${snapshot.hasError}"),
@@ -629,24 +626,31 @@ class LandingPage extends StatelessWidget {
           );
         }
 
-        if(snapshot.connectionState == ConnectionState.done) {
+        if (snapshot.connectionState == ConnectionState.done) {
 //          return Homepage(); SecondPage();
           return StreamBuilder(
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
-              if(snapshot.connectionState == ConnectionState.active) {
+              if (snapshot.connectionState == ConnectionState.active) {
                 User user = snapshot.data;
 
-                if(user == null) {
+                if (user == null) {
                   return LoginPage();
-
                 } else {
                   return SecondPage();
                 }
               }
               return Scaffold(
-                body: Center(
-                  child: Text("Checking Authentication..."),
+                body:
+                    // Center(
+                    //   child: Text("Checking Authentication..."),
+                    // ),
+                    Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fbaclgroundlogin.jpg?alt=media&token=580634db-454e-4bec-82a3-e3b0e3a16c9f")),
+                  ),
                 ),
               );
             },
@@ -658,7 +662,6 @@ class LandingPage extends StatelessWidget {
             child: Text("Connerting to the app..."),
           ),
         );
-
       },
     );
   }
