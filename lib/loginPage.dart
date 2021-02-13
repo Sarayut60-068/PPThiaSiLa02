@@ -5,6 +5,7 @@ import 'package:thaisila02/study.dart';
 import 'package:thaisila02/contact.dart';
 import 'package:thaisila02/setting.dart';
 import 'package:thaisila02/vocabulary/hadevocabulary.dart';
+import 'grme/quizz/quizzmain.dart';
 import 'user.dart';
 import 'home.dart';
 import 'study.dart';
@@ -897,7 +898,14 @@ class HomeScreen extends StatelessWidget {
                           title: "แบบทดสอบ",
                           svgSrc:
                               "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fgame-console.svg?alt=media&token=ec53a4b9-b33a-44b4-83b9-7ca7d3219cdd",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => QuizzApp(),
+                              ),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "คะแนน",

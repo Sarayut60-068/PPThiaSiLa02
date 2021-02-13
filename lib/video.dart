@@ -24,43 +24,43 @@ class video extends StatelessWidget {
           backgroundColor: Colors.purple,
         ),
         body: ListView(
-          children: <Widget>[
-            RaisedButton(
-//              onPressed: () {
-//                Navigator.push(context,
-//                    MaterialPageRoute(builder: (context) => evideo()));
-//              },
-              color: Colors.green,
-              child: Text(
-                'Easy level',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+          // children: <Widget>[
+          //   RaisedButton(
+          //    onPressed: () {
+          //      Navigator.push(context,
+          //          MaterialPageRoute(builder: (context) => evideo()));
+          //    },
+          //     color: Colors.green,
+          //     child: Text(
+          //       'Easy level',
+          //       style: TextStyle(color: Colors.white),
+          //     ),
+          //   ),
 
-            RaisedButton(
-//              onPressed: () {
-//                Navigator.push(context,
-//                    MaterialPageRoute(builder: (context) => mvideo()));
-//              },
-              color: Colors.lightBlueAccent,
-              child: Text(
-                'Medium level',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+          //   RaisedButton(
+          //    onPressed: () {
+          //      Navigator.push(context,
+          //          MaterialPageRoute(builder: (context) => mvideo()));
+          //    },
+          //     color: Colors.lightBlueAccent,
+          //     child: Text(
+          //       'Medium level',
+          //       style: TextStyle(color: Colors.white),
+          //     ),
+          //   ),
 
-            RaisedButton(
-//              onPressed: () {
-//                Navigator.push(context,
-//                    MaterialPageRoute(builder: (context) => dvideo()));
-//              },
-              color: Colors.red,
-              child: Text(
-                'Difficult level',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
+          //   RaisedButton(
+          //    onPressed: () {
+          //      Navigator.push(context,
+          //          MaterialPageRoute(builder: (context) => dvideo()));
+          //    },
+          //     color: Colors.red,
+          //     child: Text(
+          //       'Difficult level',
+          //       style: TextStyle(color: Colors.white),
+          //     ),
+          //   ),
+          // ],
         ),
       ),
     );
