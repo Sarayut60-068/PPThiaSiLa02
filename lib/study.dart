@@ -27,7 +27,7 @@ class study extends StatelessWidget {
     ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Stady'),
+          title: Text('Welcome to Study'),
           elevation: 0,
           backgroundColor: Colors.green,
         ),

@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:thaisila02/ai.dart';
 import 'package:thaisila02/main.dart';
 import 'package:thaisila02/study.dart';
@@ -1006,6 +1008,9 @@ class SearchBar extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  // final TextEditingController searchController = TextEditingController();
+  // QuerySnapshot snapshotData;
+  // bool isExcecuted = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -1015,27 +1020,51 @@ class SearchBar extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(29.5),
       ),
-      child: 
-      // TextField(
-        // decoration: InputDecoration(
-        //   hintText: "Search",
-        //   icon: SvgPicture.network(
-        //       "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fsearch.svg?alt=media&token=824bc34d-4a92-4519-bd28-c0e1e4063a3c"),
-        //   border: InputBorder.none,
-        // ),
+      child:
+          // TextField(
+          // decoration: InputDecoration(
+          //   hintText: "Search",
+          //   icon: SvgPicture.network(
+          //       "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fsearch.svg?alt=media&token=824bc34d-4a92-4519-bd28-c0e1e4063a3c"),
+          //   border: InputBorder.none,
+          // ),
 
-            Builder(
-               builder: (context) => IconButton(
-                 icon: Icon(Icons.search),
-                 onPressed: () {
-              Navigator.push(context,
-                  // MaterialPageRoute(builder: (context) => CloudFirestoreSearch()));
-                   MaterialPageRoute(builder: (context) => SearcPageDate()));
-            },
+          Builder(
+        builder: (context) => IconButton(
+          icon: Icon(Icons.search),
+          onPressed: () {
+            Navigator.push(
+                context,
+                // MaterialPageRoute(builder: (context) => CloudFirestoreSearch()));
+                MaterialPageRoute(builder: (context) => CloudFirestoreSearch()));
+          },
         ),
       ),
 
-      
+      //              Builder(
+      //          builder: (context) => IconButton(
+      //            icon: Icon(Icons.search),
+      //            onPressed: () {
+      //              val.queryData(searchController.text).then((value) {
+
+      //              });
+      //            },
+      //   ),
+      // ),
+//             Builder(builder: (val) {
+//           return IconButton(
+//             icon: Icon(Icons.search),
+//             onPressed: () {
+//               val.queryData(searchController.text).then((value) {
+//                 snapshotData = value;
+//                 setState(() {
+//                   isExcecuted = true;
+//                 });
+//               });
+//             },
+//           );
+//         }
+//         )
     );
   }
 }
@@ -1071,6 +1100,14 @@ class BottomNavBar extends StatelessWidget {
             title: "Profile",
             svgScr:
                 "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fuser.svg?alt=media&token=bdce9f2c-5a80-4c1a-90d9-4981f8b83161",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => home(),
+                  ),
+                );
+              },
           ),
         ],
       ),

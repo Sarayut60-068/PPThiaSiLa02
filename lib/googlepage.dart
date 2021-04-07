@@ -5,6 +5,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import "package:http/http.dart" as http;
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:thaisila02/loginPage.dart';
+
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: <String>[
@@ -126,6 +128,13 @@ class SignInDemoState extends State<SignInDemo> {
             child: const Text('REFRESH'),
             onPressed: _handleGetContact,
           ),
+          RaisedButton(
+            child: const Text('ไปหน้าหลัก'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SecondPage()));
+            },
+          ),
         ],
       );
     } else {
@@ -150,6 +159,7 @@ class SignInDemoState extends State<SignInDemo> {
         ),
         body: ConstrainedBox(
           constraints: const BoxConstraints.expand(),
+//          child: SecondPage(),
           child: _buildBody(),
         ));
   }

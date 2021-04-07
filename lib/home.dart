@@ -3,10 +3,40 @@ import 'package:thaisila02/contact.dart';
 import 'package:thaisila02/setting.dart';
 import 'loginPage.dart';
 import 'home.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 class home extends StatelessWidget{
+
+//  @override
+//  _HomeState createState() => _HomeState();
+//}
+//
+//class _HomeState extends State<Home>{
+//  String login = '...';
+//  Widget currentWidget = showListproguct();
+//
+//  @override
+//  void inrtState() {
+//    super.initState();
+//    findDisplayName();
+//  }
+//
+//  Future<void> findDisplayName() async {
+//    FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+//    setState(() {
+//      login = firebaseUser.displayName;
+//    });
+//    print('login = $login');
+//  }
+//
+//  Widget showLogin() {
+//    return Text(
+//      'Login by $login',
+//      style: TextStyle(color: Colors.white),
+//    );
+//  }
+
   @override
   Widget build(BuildContext context) {
      // TODO: implement build
