@@ -4,6 +4,13 @@ import '../constants.dart';
 import 'constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../googlepage.dart';
+import 'package:thaisila02/googlepage.dart';
+
+import 'dart:ui';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
+
+import 'package:thaisila02/loginPage.dart';
 
 class LoginPage extends StatefulWidget {
 @override
@@ -132,7 +139,7 @@ class _LoginPageState extends State<LoginPage > {
 //     );
 //   }
 String _email, _password;
-  
+
   Future<void> _createUser() async {
     try {
       print("Email: $_email Password: $_password"); //ตรวจสอบความผิดพลาดตอนรัน ดูในเทอมิอน
@@ -508,5 +515,6 @@ String _email, _password;
     );
   }
 }
+
 
 
