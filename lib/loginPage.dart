@@ -4,6 +4,7 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:thaisila02/ai.dart';
 import 'package:thaisila02/grme/DragandDrop/DragandDrop.dart';
 import 'package:thaisila02/grme/homegame.dart';
+import 'package:thaisila02/grme/score.dart';
 import 'package:thaisila02/main.dart';
 import 'package:thaisila02/study.dart';
 import 'package:thaisila02/contact.dart';
@@ -919,7 +920,7 @@ class HomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
-                                // return DetailsScreen();
+                                 return score();
                               }),
                             );
                           },
