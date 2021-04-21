@@ -377,27 +377,27 @@ String _email, _password;
             // ),
           ),
         ),
-         GestureDetector(
-          onTap: () {},
-          child: Container(
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: kFackbookeColor,
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black26,
-                    offset: Offset(0, 2),
-                    blurRadius: 6.0)
-              ],
-            ),
-            child: Icon(
-              FontAwesomeIcons.facebook,
-              color: Colors.white,
-            ),
-          ),
-        ),
+//         GestureDetector(
+//          onTap: () {},
+//          child: Container(
+//            height: 60,
+//            width: 60,
+//            decoration: BoxDecoration(
+//              shape: BoxShape.circle,
+//              color: kFackbookeColor,
+//              boxShadow: [
+//                BoxShadow(
+//                    color: Colors.black26,
+//                    offset: Offset(0, 2),
+//                    blurRadius: 6.0)
+//              ],
+//            ),
+//            child: Icon(
+//              FontAwesomeIcons.facebook,
+//              color: Colors.white,
+//            ),
+//          ),
+//        ),
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
+import 'package:thaisila02/ProfilePage.dart';
 import 'package:thaisila02/ai.dart';
 import 'package:thaisila02/grme/DragandDrop/DragandDrop.dart';
 import 'package:thaisila02/grme/homegame.dart';
@@ -929,7 +930,14 @@ class HomeScreen extends StatelessWidget {
                           title: "ThaiSiLa ",
                           svgSrc:
                               "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2FUntitled-1.svg?alt=media&token=22d46f56-fd20-4ca1-84d7-80da2e29200c",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return homeThaiSila();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
@@ -1099,19 +1107,19 @@ class BottomNavBar extends StatelessWidget {
           //   svgScr: "",
           //   isActive: true,
           // ),
-          BottomNavItem(
-            title: "Profile",
-            svgScr:
-                "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fuser.svg?alt=media&token=bdce9f2c-5a80-4c1a-90d9-4981f8b83161",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => home(),
-                  ),
-                );
-              },
-          ),
+//          BottomNavItem(
+//            title: "Profile",
+//            svgScr:
+//                "https://firebasestorage.googleapis.com/v0/b/thaisila02.appspot.com/o/BackGround%2Fuser.svg?alt=media&token=bdce9f2c-5a80-4c1a-90d9-4981f8b83161",
+//              press: () {
+//                Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                    builder: (context) => Profile(),
+//                  ),
+//                );
+//              },
+//          ),
         ],
       ),
     );
